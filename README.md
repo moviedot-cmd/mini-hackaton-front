@@ -1,5 +1,4 @@
 # mini-hackaton-front
-
 An [Astro](https://astro.build) project with [React](https://react.dev) template for the mini hackathon.
 
 ## Scripts
