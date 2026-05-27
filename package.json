@@ -1,0 +1,23 @@
+{
+  "name": "mini-hackaton-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@11.3.0",
+  "dependencies": {
+    "@astrojs/react": "^5.0.5",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^6.3.8",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
