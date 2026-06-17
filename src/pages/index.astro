@@ -1,17 +1,56 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import Layout from '../layouts/Layout.astro';
+import { Section } from '../components/Section/Section';
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+
+<Layout title="AI Hackathon">
+  <Section title="Acerca del Hackathon" color="primary" id="acerca" className="bg-surface">
+    <p class="mb-4">
+      Bienvenido al AI Hackathon, un evento de 48 horas donde desarrolladores,
+      diseñadores y entusiastas de la inteligencia artificial se unen para crear
+      proyectos innovadores.
+    </p>
+    <div class="grid gap-4 md:grid-cols-3">
+      <article class="rounded-lg bg-background p-4 border border-white/10">
+        <h3 class="text-primary font-semibold mb-2">Aprende</h3>
+        <p>Talleres y mentorías con expertos en IA.</p>
+      </article>
+      <article class="rounded-lg bg-background p-4 border border-white/10">
+        <h3 class="text-primary font-semibold mb-2">Crea</h3>
+        <p>Construye prototipos con las últimas herramientas.</p>
+      </article>
+      <article class="rounded-lg bg-background p-4 border border-white/10">
+        <h3 class="text-primary font-semibold mb-2">Compite</h3>
+        <p>Premios para los proyectos más impactantes.</p>
+      </article>
+    </div>
+  </Section>
+
+  <Section title="Actualizaciones" color="secondary" id="actualizaciones">
+    <ul class="space-y-3">
+      <li class="border-l-4 border-secondary pl-4">
+        <strong class="text-text">Apertura de inscripciones</strong>
+        <p>Las inscripciones ya están abiertas hasta una semana antes del evento.</p>
+      </li>
+      <li class="border-l-4 border-secondary pl-4">
+        <strong class="text-text">Nuevo track de Agentes IA</strong>
+        <p>Este año incorporamos un track dedicado a agentes autónomos.</p>
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="Precios" color="primary" id="precios" className="bg-surface">
+    <div class="flex flex-col gap-4 md:flex-row">
+      <article class="flex-1 rounded-lg bg-background p-6 border border-white/10 text-center">
+        <h3 class="text-xl font-bold text-text mb-2">General</h3>
+        <p class="text-3xl font-bold text-primary mb-4">Gratis</p>
+        <p>Acceso a todas las charlas y área de trabajo.</p>
+      </article>
+      <article class="flex-1 rounded-lg bg-background p-6 border border-white/10 text-center">
+        <h3 class="text-xl font-bold text-text mb-2">Pro</h3>
+        <p class="text-3xl font-bold text-secondary mb-4">$20</p>
+        <p>Kit de bienvenida, mentoría prioritaria y swag exclusivo.</p>
+      </article>
+    </div>
+  </Section>
+</Layout>
