@@ -1,0 +1,111 @@
+@use 'sass:color';
+@use '../../styles/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: $header-height;
+  background-color: rgba($color-bg, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $color-border;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-4;
+  max-width: $max-width;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 $space-6;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 0 $space-8;
+  }
+}
+
+.header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  color: $color-text;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-primary;
+  }
+}
+
+.header__brand-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: $color-primary;
+  flex-shrink: 0;
+}
+
+.header__brand-text {
+  display: none;
+
+  @media (min-width: $breakpoint-md) {
+    display: inline;
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @media (min-width: $breakpoint-lg) {
+    display: block;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: $space-6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-link {
+  color: $color-text-muted;
+  text-decoration: none;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  transition: color 150ms ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-text;
+  }
+}
+
+.header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-2 $space-5;
+  background-color: $color-secondary;
+  color: $color-text;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  border-radius: $radius-md;
+  white-space: nowrap;
+  transition: background-color 150ms ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: color.adjust($color-secondary, $lightness: -10%);
+  }
+}

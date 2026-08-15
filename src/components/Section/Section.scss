@@ -1,0 +1,44 @@
+@use '../../styles/variables' as *;
+
+.section {
+  width: 100%;
+  padding: $space-12 $space-6;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $space-16 $space-8;
+  }
+}
+
+.section__container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.section__title {
+  margin: 0 0 $space-6;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+    margin-bottom: $space-8;
+  }
+}
+
+.section__body {
+  color: $color-text-muted;
+  font-size: $font-size-base;
+  line-height: $line-height-relaxed;
+}
+
+// Theme modifiers
+.section--primary .section__title {
+  color: $color-primary;
+}
+
+.section--secondary .section__title {
+  color: $color-secondary;
+}
