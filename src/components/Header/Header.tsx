@@ -6,7 +6,7 @@ export interface HeaderProps {
   // Reserved for future customization; initial version uses defaults.
 }
 
-const navItems = [
+const NAV_ITEMS = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Acerca de', href: '#acerca' },
   { label: 'Actualizaciones', href: '#actualizaciones' },
@@ -26,7 +26,7 @@ export const Header: FC<HeaderProps> = () => {
 
         <nav className="header__nav" aria-label="Navegación principal">
           <ul className="header__nav-list">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <li key={item.href} className="header__nav-item">
                 <a className="header__nav-link" href={item.href}>
                   {item.label}
